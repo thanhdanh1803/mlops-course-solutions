@@ -16,9 +16,9 @@ def test_root(client):
 
 
 def test_calculate_add(client):
-    response = client.post("/calculate", json={"method": "add", "num1": 1, "num2": 2})
+    response = client.post("/calculate", json={"method": "add", "num1": 3, "num2": 2})
     assert response.status_code == 200
-    assert response.json() == {"result": 3}
+    assert response.json() == {"result": 5}
 
 
 def test_calculate_subtract(client):
